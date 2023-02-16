@@ -17,7 +17,7 @@
       <hr>
       <h1 class="text-success">Posts: {{count($user->posts)}}</h1>
 
-      @foreach ($user->posts as $post)
+      @foreach ($user->posts->sortByDesc('created_at') as $post)
       <div class="col-xs-12">
          <div class="card text-center">
             <img class="card-img-top card-image" src="{{ asset($post->image) }}" alt="Post Image">

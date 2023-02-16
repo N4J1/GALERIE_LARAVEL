@@ -51,7 +51,7 @@ class UserController extends Controller
         ]);
         if (auth()->attempt($user)) {
             $request->session()->regenerate();
-            return redirect('/')->with('message', 'Vous avez été déconnecté !');
+            return redirect('/')->with('message', 'Vous avez été connecté !');
         }
 
         return back()->withErrors(['email' => 'Email ou mot de pass est incorrect']);

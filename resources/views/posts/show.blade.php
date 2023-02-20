@@ -1,6 +1,8 @@
 <x-layout title="{{$post->title}}">
    <main class="container">
-<hr>
+       <hr>
+       <a href="/" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"></i> Retour</a>
+        <hr>
          <div class="container">
             <div class="card">
                <div class="card-body">
@@ -88,8 +90,8 @@
 
                   <!-- Comments -->
                   @foreach ($post->comments as $comment)
-                      
-                  
+
+
                      <hr>
                      <div class="comment mb-1">
                         <div class="row align-items-center">

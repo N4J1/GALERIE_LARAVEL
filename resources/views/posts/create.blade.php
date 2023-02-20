@@ -1,6 +1,9 @@
 <x-layout title="Ajouter un post">
    <main class="container">
+
          <h1 class="text-left my-4 text-success fw-bold">Poster Nouvelle Image</h1>
+       <hr>
+       <a href="/" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"></i> Retour</a>
          <hr>
          <form action="/posts/create" method="post" enctype="multipart/form-data">
             @csrf

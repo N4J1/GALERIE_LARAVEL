@@ -1,7 +1,7 @@
 <x-layout title="Modifier le post">
    <section class="container">
       <hr>
-      <a href="/posts/{{$post->id}}" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"></i> Retour</a>
+      <a href="/" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"></i> Retour</a>
       <hr>
       <h1 class="text-center my-4 text-success fw-bold">Modifier le post</h1>
       <hr>

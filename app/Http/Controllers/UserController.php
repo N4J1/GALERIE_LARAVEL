@@ -34,7 +34,7 @@ class UserController extends Controller
         $user = User::create($data);
 
         auth()->login($user);
-        return redirect('/')->with("message", "Compte créé avec succès");
+        return redirect()->intended()->with("message", "Compte créé avec succès");
     }
 
     // login view
@@ -51,7 +51,7 @@ class UserController extends Controller
         ]);
         if (auth()->attempt($user)) {
             $request->session()->regenerate();
-            return redirect('/')->with('message', 'Vous avez été connecté !');
+            return redirect()->intended()->with('message', 'Vous avez été connecté !');
         }
 
         return back()->withErrors(['email' => 'Email ou mot de pass est incorrect']);

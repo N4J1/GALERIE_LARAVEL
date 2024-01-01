@@ -31,7 +31,7 @@
                   <h3 class="card-title">@ {{$post->user->name}}</h3>
                </a>
                <p class="card-text small text-muted">
-                  <i class="fa-regular fa-clock"></i> <time datetime="{{$post->created_at}}">{{$post->created_at}}</time>
+                  <i class="fa-regular fa-clock"></i> <time datetime="{{$post->created_at->diffForHumans()}}">{{$post->created_at->diffForHumans()}}</time>
                </p>
                <h1 class="card-title text-primary"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h1>
                <p class="card-text post__body">{{$post->content}}</p>

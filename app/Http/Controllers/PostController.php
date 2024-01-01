@@ -19,11 +19,6 @@ class PostController extends Controller
     // show one post
     public function show(Post $post)
     {
-        // dd(Carbon::parse($post['created_at'])->diffForHumans());
-        
-        // $post['created_at'] = Carbon::parse($post['created_at'])->diffForHumans();
-        // $post['updated_at'] = Carbon::parse($post['updated_at'])->diffForHumans();
-
         return view('posts.show', [
             'post' => $post
         ]);

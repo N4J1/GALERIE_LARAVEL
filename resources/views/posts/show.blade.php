@@ -29,7 +29,7 @@
 
                            <!-- Time -->
                            <p class="card-text small text-muted">
-                              <i class="fa-regular fa-clock"></i> <time datetime="{{$post->created_at}}">{{$post->created_at}}</time>
+                              <i class="fa-regular fa-clock"></i> <time datetime="{{$post->created_at->diffForHumans()}}">{{$post->created_at->diffForHumans()}}</time>
                            </p>
 
                         </div>
@@ -83,7 +83,7 @@
                   </p>
 
                   <div class="d-flex justify-content-between text-muted my-3">
-                     <small>Dernière actualisation :{{$post->updated_at}}</small><a href="{{asset($post->image)}}" class="btn btn-sm btn-outline-success flex-grow-2" download>Télécharger <i class="fa-solid fa-cloud-arrow-down"></i></a>
+                     <small>Dernière actualisation :{{$post->updated_at->diffForHumans()}}</small><a href="{{asset($post->image)}}" class="btn btn-sm btn-outline-success flex-grow-2" download>Télécharger <i class="fa-solid fa-cloud-arrow-down"></i></a>
                   </div>
                   <!-- Divider -->
                   <h2 class="text-warning fw-bold">Commentaires:</h2>
@@ -123,7 +123,7 @@
 
                                        <!-- Time -->
                                        <time class="comment-time">
-                                          <?= $comment->created_at ?>
+                                          <?= $comment->created_at->diffForHumans() ?>
                                        </time>
 
                                     </div>

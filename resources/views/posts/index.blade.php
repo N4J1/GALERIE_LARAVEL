@@ -34,7 +34,7 @@
                <p class="card-text post__body">{{$post->content}}</p>
                <div class="d-md-flex gap-2">
                   <a href="/posts/{{$post->id}}" class="btn btn-primary flex-grow-1">Aller à le Post</a>
-                  <a href="/{{$post->image}}" class="btn btn-success flex-grow-2" download>Télécharger <i class="fa-solid fa-cloud-arrow-down"></i></a>
+                  <a href="{{$post->image}}" class="btn btn-success flex-grow-2" download>Télécharger <i class="fa-solid fa-cloud-arrow-down"></i></a>
                </div>
             </div>
          </div>
